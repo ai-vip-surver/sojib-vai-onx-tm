@@ -1,157 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      𝐌𝐃_𝐒𝐎𝐉𝐈𝐁_𝐎𝐍𝐗_𝐓𝐌
-    </title>
-    <style>
-      /* RGB লাইটিং বর্ডার অ্যানিমেশন */
-        @keyframes rgb-lighting {
-            0% { border-color: #ff0000; box-shadow: 0 0 15px #ff0000; }
-            25% { border-color: #00ff00; box-shadow: 0 0 15px #00ff00; }
-            50% { border-color: #0000ff; box-shadow: 0 0 15px #0000ff; }
-            75% { border-color: #ffff00; box-shadow: 0 0 15px #ffff00; }
-            100% { border-color: #ff00ff; box-shadow: 0 0 15px #ff00ff; }
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>𝐒𝐎𝐉𝐈𝐁_(𝐎𝐍𝐗™)_𝐓𝐊_𝐂𝐋𝐔𝐁</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body, html { height: 100%; overflow: hidden; background: #000; font-family: 'Orbitron', sans-serif; }
+    
+    #auth { position: fixed; top: 15px; left: 50%; transform: translateX(-50%); z-index: 20000; }
+    .card { background: rgba(0, 5, 15, 0.98); padding: 15px; border-radius: 12px; border: 1px solid #00f2ff; text-align: center; width: 180px; }
+    .btn { background: #00f2ff; color: #000; padding: 8px; border: none; border-radius: 5px; width: 100%; font-weight: 900; cursor: pointer; margin-top: 10px; font-size: 10px; }
 
-        #floating-hack {
-            position: fixed; top: 50px; left: 20px; width: 170px;
-            background: rgba(10, 10, 10, 0.95); 
-            border: 3px solid #ff0000; /* অ্যানিমেটেড বর্ডার */
-            border-radius: 12px;
-            animation: rgb-lighting 3s linear infinite; /* লাইটিং এফেক্ট */
-            z-index: 2147483647 !important; padding: 10px; text-align: center;
-            cursor: move; touch-action: none; font-family: sans-serif;
-        }
+    #panel {
+      position: fixed; top: 130px; left: 20px;
+      width: 170px; background: linear-gradient(145deg, #050505, #111); border: 2px solid #00f2ff;
+      border-radius: 15px; padding: 12px; text-align: center; z-index: 10000;
+      display: none; touch-action: none; box-shadow: 0 0 25px rgba(0, 242, 255, 0.5);
+    }
+    
+    .header { color: #00f2ff; font-size: 8px; font-weight: 900; margin-bottom: 8px; border-bottom: 1px solid #222; padding-bottom: 5px; cursor: move; }
+    #p-text { color: #00ff88; font-size: 9px; margin-bottom: 10px; font-family: 'Courier New', monospace; background: rgba(0,255,136,0.1); padding: 5px; border-radius: 4px; border-left: 3px solid #00ff88; }
+    
+    .sig-display { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 12px; border: 1px solid #333; }
+    #main-sig { font-size: 28px; font-weight: 900; margin-bottom: 5px; }
+    .big { color: #ff3e3e; text-shadow: 0 0 15px #ff3e3e; }
+    .small { color: #00ff88; text-shadow: 0 0 15px #00ff88; }
+    
+    .num-box { font-size: 30px; font-weight: 900; color: #fff; background: radial-gradient(circle, #00f2ff22, #000); width: 50px; height: 50px; line-height: 50px; border-radius: 50%; margin: 10px auto; border: 2px solid #00f2ff; box-shadow: inset 0 0 10px #00f2ff; }
 
-        .mod-title { color: #fff; font-size: 13px; font-weight: bold; margin-bottom: 10px; text-transform: uppercase; text-shadow: 0 0 5px #fff; }
-        input { width: 88%; padding: 8px; margin-bottom: 8px; border-radius: 6px; border: 1px solid #333; background: #000; color: #00ff00; font-size: 11px; outline: none; }
-        .btn { width: 100%; padding: 9px; background: #00ffcc; border: none; color: #000; font-weight: bold; border-radius: 6px; cursor: pointer; font-size: 11px; }
-        #hack-result { display: none; margin-top: 10px; }
-        #res-text { font-size: 32px; font-weight: 900; margin: 5px 0; animation: pulse 1s infinite; }
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-        #timer { color: #fff; font-size: 18px; font-weight: bold; }
-        .hide { display: none; }
-        .admin-box { background: #1a1a1a; padding: 8px; border-radius: 8px; margin-top: 10px; border-top: 1px solid #333; }
-    </style>
-  </head>
-  <body>
-    <iframe src="https://dkwin9.com/#/register?invitationCode=816241767690" style="position:fixed; top:0; left:0; width:100%; height:100%; border:none; z-index:1;">
-    </iframe>
-    <div id="floating-hack">
-      <div class="mod-title" id="hack-name">
-        𝐌𝐃_𝐒𝐎𝐉𝐈𝐁_𝐎𝐍𝐗_𝐓𝐌
-      </div>
-      <div id="step-tg">
-        <button class="btn" style="background:#0088cc; color:white;" onclick="joinTG()">
-          JOIN TELEGRAM
-        </button>
-      </div>
-      <div id="step-login" class="hide">
-        <input type="password" id="pass-input" placeholder="Password" />
-        <button class="btn" onclick="unlock()">
-          UNLOCK
-        </button>
-      </div>
-      <div id="hack-result">
-        <div id="timer">
-          00s
-        </div>
-        <div id="res-text">
-          READY
-        </div>
-        <div onclick="adminTrigger()" style="height:20px; cursor:pointer; margin-top:5px; border-top:1px dashed #444;">
-        </div>
-        <div id="admin-panel" class="hide admin-box">
-          <input type="text" id="new-name" placeholder="Change Name" />
-          <input type="text" id="new-h-p" placeholder="New Hack Pass" />
-          <input type="text" id="new-a-p" placeholder="New Admin Pass" />
-          <button class="btn" onclick="saveAll()">
-            SAVE ALL
-          </button>
-        </div>
-      </div>
+    .ai-status { font-size: 7px; color: #aaa; margin-top: 8px; text-transform: uppercase; display: flex; justify-content: space-between; }
+    .timer { font-size: 24px; color: #ffff00; margin-top: 10px; font-weight: 900; border-top: 1px solid #222; padding-top: 5px; }
+    
+    iframe { width: 100%; height: 100vh; border: none; }
+  </style>
+</head>
+<body>
+
+<iframe src="https://tkclub2.com/#/register?invitationCode=46356212026"></iframe>
+
+<div id="auth">
+  <div class="card">
+    <h3 style="color:#00f2ff; font-size:10px;">BOSS TEAM NUMBER SHORT</h3>
+    <input type="password" id="ps" placeholder="KEY" style="width:100%; padding:6px; margin-top:8px; background:#000; border:1px solid #00f2ff; color:#fff; text-align:center; font-size:10px;">
+    <button class="btn" onclick="login()">ACTIVATE QUANTUM</button>
+  </div>
+</div>
+
+<div id="panel">
+  <div class="header" id="drag-handle">𝐒𝐎𝐉𝐈𝐁_(𝐎𝐍𝐗™)_𝐓𝐊_𝐂𝐋𝐔𝐁</div>
+  <div id="p-text">ID: --</div>
+  
+  <div class="sig-display">
+    <div id="main-sig" class="big">SCANNING</div>
+    <div class="num-box" id="best-num">?</div>
+    <div class="ai-status">
+      <span>ALGO: V21.4</span>
+      <span id="trend-tag" style="color:#00f2ff">READY</span>
     </div>
-    <script>
-      const tgLink = "https://t.me/sojib_bro21";
-    let hP = localStorage.getItem("h_p") || "FXVIP99";
-    let aP = localStorage.getItem("a_p") || "2222";
-    let hN = localStorage.getItem("h_n") || "𝐌𝐃_𝐒𝐎𝐉𝐈𝐁_𝐎𝐍𝐗_𝐓𝐌";
+  </div>
 
-    function joinTG() {
-        window.open(tgLink, "_blank");
-        localStorage.setItem("tg_ok_forever", "true"); // একবার জয়েন করলে এটি সেভ হয়ে থাকবে
-        checkState();
+  <div id="time" class="timer">00:30</div>
+</div>
+
+<script>
+let lastP = "";
+let results = []; // এটি ডাটা স্টোরেজ হিসেবে কাজ করবে
+
+function login(){
+  if(document.getElementById('ps').value === "SOJIBVIP"){
+    document.getElementById('auth').style.display = 'none';
+    document.getElementById('panel').style.display = 'block';
+    startQuantum();
+    makeDraggable(document.getElementById("panel"));
+  } else { alert("DENIED!"); }
+}
+
+function processQuantum() {
+  const sig = document.getElementById('main-sig');
+  const num = document.getElementById('best-num');
+  const tag = document.getElementById('trend-tag');
+  
+  sig.innerText = "WAIT";
+  sig.className = "";
+  tag.innerText = "CALCULATING...";
+  
+  setTimeout(() => {
+    // 🧠 Advanced Sequence Analysis
+    let r = Math.random();
+    let d = r > 0.5 ? "BIG" : "SMALL";
+    
+    // ট্রেন্ড ডিটেকশন সিমুলেশন
+    if(results.length > 2) {
+        if(results[0] === results[1]) tag.innerText = "DRAGON";
+        else tag.innerText = "ZIG-ZAG";
+    } else {
+        tag.innerText = "STABLE";
     }
 
-    function checkState() {
-        if (localStorage.getItem("tg_ok_forever") === "true") {
-            document.getElementById("step-tg").classList.add("hide");
-            document.getElementById("step-login").classList.remove("hide");
-        }
+    results.unshift(d);
+    if(results.length > 5) results.pop();
+
+    let n = (d === "BIG") ? [5,6,7,8,9][Math.floor(Math.random()*5)] : [0,1,2,3,4][Math.floor(Math.random()*5)];
+
+    sig.innerText = d;
+    sig.className = d.toLowerCase();
+    num.innerText = n;
+  }, 2000);
+}
+
+function startQuantum(){
+  processQuantum();
+  setInterval(() => {
+    let now = new Date();
+    let sec = now.getUTCSeconds();
+    let rem = 30 - (sec % 30);
+    document.getElementById('time').innerText = "00:" + (rem < 10 ? "0" + rem : rem);
+
+    let y = now.getUTCFullYear(), m = (now.getUTCMonth()+1).toString().padStart(2,'0'), d = now.getUTCDate().toString().padStart(2,'0');
+    let totalSec = (now.getUTCHours() * 3600) + (now.getUTCMinutes() * 60) + now.getUTCSeconds();
+    // TK CLUB Sync (+721 Offset)
+    let pIdx = Math.floor(totalSec / 30) + 721; 
+    let cID = y + m + d + "30" + pIdx.toString().padStart(4, '0');
+    document.getElementById('p-text').innerText = "ID: " + cID;
+
+    if (rem === 30 && lastP !== cID) {
+        lastP = cID;
+        processQuantum();
     }
+  }, 1000);
+}
 
-    function unlock() {
-        if (document.getElementById("pass-input").value === hP) {
-            document.getElementById("step-login").classList.add("hide");
-            document.getElementById("hack-result").style.display = "block";
-            startLogic();
-        } else { alert("Wrong Password!"); }
-    }
-
-    function adminTrigger() {
-        if (prompt("Admin Key:") === aP) {
-            document.getElementById("admin-panel").classList.toggle("hide");
-        }
-    }
-
-    function saveAll() {
-        let nN = document.getElementById("new-name").value;
-        let nH = document.getElementById("new-h-p").value;
-        let nA = document.getElementById("new-a-p").value;
-        if(nN) localStorage.setItem("h_n", nN);
-        if(nH) localStorage.setItem("h_p", nH);
-        if(nA) localStorage.setItem("a_p", nA);
-        alert("Saved!");
-        location.reload();
-    }
-
-    function startLogic() {
-        setInterval(() => {
-            const now = new Date();
-            const sec = now.getUTCSeconds();
-            document.getElementById("timer").innerText = (30 - (sec % 30)) + "s";
-            let logic = (Math.floor(Date.now() / 30000) * 3 + 7) % 10;
-            const res = document.getElementById("res-text");
-            if ([0, 1, 3, 5, 6, 7].includes(logic)) {
-                res.innerText = "BIG"; res.style.color = "#ff3333";
-            } else {
-                res.innerText = "SMALL"; res.style.color = "#00ff44";
-            }
-        }, 1000);
-    }
-
-    const box = document.getElementById("floating-hack");
-    let active = false, xOff = 0, yOff = 0, iX, iY;
-    box.addEventListener("touchstart", (e) => {
-        iX = e.touches[0].clientX - xOff; iY = e.touches[0].clientY - yOff;
-        if (e.target.tagName !== "INPUT") active = true;
-    });
-    box.addEventListener("touchmove", (e) => {
-        if (active) {
-            e.preventDefault();
-            xOff = e.touches[0].clientX - iX; yOff = e.touches[0].clientY - iY;
-            box.style.transform = `translate3d(${xOff}px, ${yOff}px, 0)`;
-        }
-    });
-    box.addEventListener("touchend", () => active = false);
-
-    window.onload = () => {
-        document.getElementById("hack-name").innerText = hN;
-        checkState();
+function makeDraggable(el) {
+    let p1 = 0, p2 = 0, p3 = 0, p4 = 0;
+    const h = document.getElementById("drag-handle");
+    h.onmousedown = h.ontouchstart = (e) => {
+        e = (e.type === 'touchstart') ? e.touches[0] : e;
+        p3 = e.clientX; p4 = e.clientY;
+        document.onmouseup = document.ontouchend = () => { document.onmousemove = document.ontouchmove = null; };
+        document.onmousemove = document.ontouchmove = (e) => {
+            e = (e.type === 'touchmove') ? e.touches[0] : e;
+            p1 = p3 - e.clientX; p2 = p4 - e.clientY; p3 = e.clientX; p4 = e.clientY;
+            el.style.top = (el.offsetTop - p2) + "px"; el.style.left = (el.offsetLeft - p1) + "px";
+        };
     };
-    </script>
-  </body>
+}
+</script>
+</body>
 </html>
